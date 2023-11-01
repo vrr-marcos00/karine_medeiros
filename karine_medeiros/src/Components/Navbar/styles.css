@@ -1,0 +1,122 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo img {
+  width: 100%;
+  height: 60px;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 80%;
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.nav-links li {
+  margin-right: 20px;
+  list-style-type: none;
+}
+
+/* Estilo padrão para os links do menu */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative; /* Adicione esta propriedade para estabelecer um contexto relativo para o pseudo-elemento */
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Estilo para o sublinhado branco */
+.nav-links a::after {
+  content: ''; /* Crie um pseudo-elemento ::after para o sublinhado */
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Altura do sublinhado */
+  bottom: 0;
+  left: 0;
+  background-color: white; /* Cor do sublinhado */
+  transform: scaleX(0); /* Inicialmente, o sublinhado não é visível (escala X igual a 0) */
+  transform-origin: right; /* O sublinhado começa do canto direito */
+  transition: transform 0.3s; /* Efeito de transição para o sublinhado */
+}
+
+/* Estilo do sublinhado ao passar o mouse sobre os links do menu */
+.nav-links a:hover::after {
+  transform: scaleX(1); /* Quando o mouse passa sobre o link, o sublinhado escala até 100% da largura */
+  transform-origin: left; /* O sublinhado expande da esquerda para a direita */
+}
+
+/* Estilos para tela pequena (mobile) */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+/* Botão do menu responsivo */
+.menu-button {
+  display: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.menu-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 40px;
+}
+
+/* Estilos para o botão do menu responsivo */
+@media screen and (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+}

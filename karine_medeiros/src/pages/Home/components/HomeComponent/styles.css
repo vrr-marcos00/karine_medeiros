@@ -1,0 +1,85 @@
+.home-component {
+    height: calc(100vh - 83.5px);
+    background: rgb(18,33,56);
+    background: linear-gradient(180deg, rgba(18,33,56,1) 0%, rgba(13,21,35,1) 50%, rgba(12,13,24,1) 100%);
+    display: flex;
+    padding-top: 85.5px;
+}
+
+.home-image {
+    width: 50%;
+    height: calc(100vh - 83.5px);
+    display: flex;
+    align-items: center;
+}
+
+.home-image img {
+    min-height: calc(100vh - 100px);
+}
+
+.home-logo {
+    width: 100%;
+    height: calc(100vh - 83.5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home-logo img {
+    width: 65%;
+    height: auto;
+    animation: growImage 2.5s ease-in-out;
+}
+
+.button-schedule {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button-schedule button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-schedule button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+    .home-logo {
+        position: absolute;
+    }
+
+    .home-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .home-image img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@keyframes growImage {
+    from {
+        width: 15%;
+    }
+    to {
+        width: 65%;
+    }
+}
