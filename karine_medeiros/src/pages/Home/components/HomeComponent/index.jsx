@@ -17,8 +17,8 @@ function HomeComponent() {
       <div className="home-logo">
         <img src={homeLogo} alt="homeLogo" />
 
-        <div className="button-schedule">
-          <button>AGENDA DE SHOWS</button>
+        <div className="button-schedule" onClick={() => window.location.href = "#contato"}>
+          <button>CONTATO</button>
         </div>
       </div>
     </div>
