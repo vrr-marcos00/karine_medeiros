@@ -10,15 +10,17 @@ import homeLogo from "./images/logo-home.png";
 function HomeComponent() {
   return (
     <div className="home-component" id="home">
-      <div className="home-image">
-        <img src={homeImage} alt="homeImage" />
-      </div>
+      <div className="home-container">
+        <div className="home-image">
+          <img src={homeImage} alt="homeImage" />
+        </div>
 
-      <div className="home-logo">
-        <img src={homeLogo} alt="homeLogo" />
+        <div className="home-logo">
+          <img src={homeLogo} alt="homeLogo" />
 
-        <div className="button-schedule" onClick={() => window.location.href = "#contato"}>
-          <button>CONTATO</button>
+          <div className="button-schedule" onClick={() => window.location.href = "#contato"}>
+            <button>CONTRATE</button>
+          </div>
         </div>
       </div>
     </div>
